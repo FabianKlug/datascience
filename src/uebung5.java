@@ -1,6 +1,6 @@
 public class uebung5 {
 
-    private static double[] x1 = { 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0 };
+   /* private static double[] x1 = { 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0 };
     private static double[] y1 = { 5.1, 7.8, 7.1, 7.4, 9.4, 8.4, 8.9, 6.2, 4.7, 3.3, 0.6 };
 
     private static double[] size = {
@@ -20,8 +20,10 @@ public class uebung5 {
 
 
     public static void main(String[] args) {
-        aufgabe3();
+
     }
+
+
 
     public static void aufgabe3() {
         double[][] myA = new double[x3.length][2];
@@ -79,40 +81,7 @@ public class uebung5 {
         printVector(xres);
     }
 
-    private static double[] solveLinearEquationSystem(double[][] a, double[] x, double[] b) {
-        double[][] l = new double[a.length][a.length];
-        double[][] r = new double[a.length][a.length];
-        double[] y = new double[a.length];
 
-        lrFactorization(a, l, r);
-        forwardSubstitution(l, y, b);
-        backwardSubstitution(r, x, y);
-        return x;
-    }
-
-    private static double[] matrixVectorMultiplication(double[][] matrixA, double[] vector) {
-        double[]result  =new double[matrixA.length];
-        for(int z= 0; z< matrixA.length; z++) {
-            for(int sp = 0; sp < matrixA[0].length; sp++) {
-                result[z] += matrixA[z][sp] * vector[sp];
-
-            }
-        }
-        return result;
-    }
-
-    private static double[][] fillMatrix(double[][] a){
-        double[][] result = new double[a.length][a[0].length];
-        for (int i=0 ; i<a[0].length ; i++) {
-            for (int j=0 ; j<a.length ; j++) {
-                //System.out.println("Emde");
-                result[j][i] = f(x1[j], (i+1));
-            }
-            //System.out.println("Emde");
-        }
-        System.out.println("Emde");
-        return result;
-    }
 
     private static double[][] fillMatrix3(double[][] a){
         double[][] result = new double[a.length][a[0].length];
@@ -142,46 +111,7 @@ public class uebung5 {
     }
 
 
-    private static double[][] transposeMatrix(double[][] a) {
-        double[][] result = new double[a[0].length][a.length];
-        for (int i=0 ; i<result.length ; i++) {
-            for (int j=0 ; j<result[0].length ; j++) {
-                result[i][j] = a[j][i];
-            }
-        }
-        return result;
-    }
-    private static double[][] matrixmultiplication(double[][] matrixA, double[][] matrixB) {
-        if(matrixA.length == matrixB[0].length){
-            double[][] resMatrix = new double[matrixA.length][matrixB[0].length];
-            for(int i = 0; i < matrixA.length; i++) {
-                for (int j = 0; j < matrixB[0].length; j++) {
-                    for (int k = 0; k < matrixB.length; k++) {
-                        resMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
-                    }
-                }
-            }
 
-            return resMatrix;
-        }
-        System.out.println("Fehler");
-        return null;
-    }
-
-    private static void printVector(double [] pVector) {
-        for(int j = 0; j < pVector.length; j++) {
-            System.out.println(pVector[j] + " ");
-        }
-    }
-
-    private static void printMatrix(double [][] pMatrix) {
-        for(int i = 0; i < pMatrix.length; i++) {
-            for(int j = 0; j < pMatrix[0].length; j++) {
-                System.out.print(pMatrix[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
     private static double f(double x, int z) {
         if(z == 1) {
             return f1(x);
@@ -366,5 +296,7 @@ public class uebung5 {
             c[j] = b[pi[j]];
         }
     }
+
+    */
 
 }
